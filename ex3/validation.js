@@ -11,7 +11,8 @@
 });*/
 function validateEmail(mail) 
 {
-  var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  //var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  var re = /[a-z]+(.[a-z])*@[a-z]+.[a-z]{2,3}/;
   if (re.test(mail)){
     return true;
   }
@@ -49,5 +50,6 @@ function validate() {
     alert( "Please provide your country!" );
     return false;
   }
-  return( true );
+  document.getElementById("content").innerHTML = "done";
+  return true;
 }
