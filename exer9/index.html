@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hello</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="res_style.css" >
+        <script>
+            $(document).ready(function(){
+                $("#btn_alert").click(()=>{
+                    alert("working");
+                });
+                $("#hide_btn").click(function(){
+                    $('#box1').hide(1000);
+                });
+                $("#show_btn").click(function(){
+                    $("#box1").show(1000);
+                });
+                $("#toggle_btn").click(()=>{
+                    $("#box2").toggle();
+                });
+                $("#div_fade").on('click',function(){
+                    $(this).fadeOut("slow");
+                });
+                $("#btn_fadein").click(function(){
+                    $("#div_fade_in").fadeIn("slow")
+                });
+                $("#btn_fadetoggle").click(function(){
+                    $("#div_fade_toggle").fadeToggle();
+                });
+                $("#div_fade_to").click(function(){
+                    $(this).fadeTo("slow",0.5);
+                });
+                $("#btn_slide").on('click',function(){
+                    $("#div_slide_toggle").slideToggle("slow");
+                });
+                $("#div_css").click(function(){
+                    $(this).css({"background-color":"yellow","width":"100%"});
+                });
+                $("#btn_animate").click(function(){
+                    $("#div_animate").animate({
+                        left:"25px",
+                        height:"300px",
+                        width:"300px"
+                    });
+                });
+
+            });
+        </script>
+        <style>
+            body{
+                padding:15px;
+            }
+            div{
+                height: 100px;
+                width:250px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <button id="btn_alert">alert test</button>
+        <div style="height: 100px;background-color: orange;width:250px;" id="box1">
+        </div>
+        <button id="hide_btn">hide</button> &nbsp; <button id="show_btn">show</button>
+
+        <div style="height: 100px;background-color: green;width:250px;" id="box2">
+        </div>
+            <button id="toggle_btn">toggle</button>
+
+        <div style="height: 100px;width:250px;background-color: blueviolet;" id="div_fade"></div>
+        <div style="background-color: aqua;display: none;" id="div_fade_in"></div>
+        <button id="btn_fadein">fade in</button>
+        <div id="div_fade_toggle" style="background-color: blue;"></div><button id="btn_fadetoggle">fade toggle</button>
+        <div id="div_fade_to" style="background-color: chartreuse;"></div>
+        <button id="btn_slide">slide</button>
+        <div id="div_slide_toggle" style="background-color: gray;color:white;height: auto;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+        <div id="div_css" style="background-color: darkslateblue;"></div>
+        <div id="div_animate" style="background-color: brown;"></div><button id="btn_animate">start animate</button>
+
+ 
+        
+    </body>
+</html>
